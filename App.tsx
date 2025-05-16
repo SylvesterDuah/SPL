@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ApolloProvider } from '@apollo/client';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { client } from './src/apollo/client';
+// import { client } from './src/apollo/client';
 import { FavoriteProvider } from './src/context/FavoriteContext';
 import LaunchOverview from './src/pages/LaunchOverview';
 import LaunchDetails from './src/pages/LaunchDetails';
@@ -13,7 +13,7 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <ApolloProvider client={client}>
+    // <ApolloProvider client={client}>
       <FavoriteProvider>
         <SafeAreaProvider>
           <NavigationContainer>
@@ -24,6 +24,6 @@ export default function App() {
           </NavigationContainer>
         </SafeAreaProvider>
       </FavoriteProvider>
-    </ApolloProvider>
+    // </ApolloProvider>
   );
 }
